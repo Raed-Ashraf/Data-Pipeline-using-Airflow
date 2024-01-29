@@ -8,6 +8,7 @@ Before running this data pipeline, ensure that you have the following dependenci
 - Docker Compose
 
 # Setup
+1- 
 
 # Project Structure
 The project's directory structure is as follows:  
@@ -19,12 +20,12 @@ The project's directory structure is as follows:
 ├── docker-compose.yml  
 ├── .env  
 └── README.md  
-- dags: Contains the DAG (Directed Acyclic Graph) file, snow-to-postgres.py, which defines the workflow of the data pipeline.
-- plugins: Contains the plugin file, if exist, which defines the custom operators and hooks used in the pipeline.
-- logs: Contains the logging file of each running DAG in Airflow server.
-- docker-compose.yml: Defines the Docker containers and services required for running Airflow and PostgreSQL.
-- .env: An environment variables file that needs to be configured.
-- README.md: This file.
+- **dags**: Contains the DAG (Directed Acyclic Graph) file, snow-to-postgres.py, which defines the workflow of the data pipeline.
+- **plugins**: Contains the plugin file, if exist, which defines the custom operators and hooks used in the pipeline.
+- **logs**: Contains the logging file of each running DAG in Airflow server.
+- **docker-compose.yaml**: Defines the Docker containers and services required for running Airflow and PostgreSQL.
+- **.env**: An environment variables file that needs to be configured.
+- **README.md**: This file.
 
 
 
