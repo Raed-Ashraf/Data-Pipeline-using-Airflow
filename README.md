@@ -48,5 +48,10 @@ The project's directory structure is as follows:
 - **.env**: An environment variables file that needs to be configured.
 - **README.md**: This file.
 
+# ServiceNow Platform Overview
+The ServiceNow platform is a cloud-based IT service management (ITSM) and business process automation solution that helps organizations streamline their workflows and improve operational efficiency. It offers a wide range of integrated applications and modules that allow businesses to manage various processes, including incident management, problem management, change management, asset management, and more.
+
+In the previous project, we utilized the ServiceNow platform to extract data from the "incidents" table using its REST API. The incidents table typically stores information about reported issues, problems, or disruptions in an organization's services or systems. By accessing this table via the ServiceNow REST API, we were able to retrieve the relevant data for our data pipeline.
 
 
+ServiceNow provides a powerful and flexible REST API that allows developers to interact with the platform and retrieve data using standard HTTP methods. With the help of the ServiceNow API, we were able to authenticate and make requests to the platform to extract the necessary data from the incidents table.
