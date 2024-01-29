@@ -102,7 +102,7 @@ def load_data_to_postgres(**context):
         host='10.218.121.82',
         port='5432',
         database='staging_import',
-        user='etluser_import',
+        user='**Enter Username Here**',
         password='**Enter Password Here**'
     )
     
