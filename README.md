@@ -34,10 +34,13 @@ Before running this data pipeline, ensure that you have the following dependenci
   
     `docker-compose up`   
   The Airflow UI will be accessible at http://localhost:8080.  
-5. In the Airflow UI, enable the snow-to-postgres DAG.
+5. In the Airflow UI, enable the snow-to-postgres DAG.  
+[See our DAG in Airflow server UI](https://github.com/Raed-Ashraf/Data-Pipeline-using-Airflow/issues/3#issue-2105339302)  
 6. Trigger the DAG manually or wait for the scheduled interval to start the data pipeline.
-7. Monitor the progress and logs in the Airflow UI.
-8. Once the pipeline finishes successfully, the transformed data will be loaded into the PostgreSQL database table.
+7. Monitor the progress and logs in the Airflow UI.  
+[See how to monitor running Airflow DAG](https://github.com/Raed-Ashraf/Data-Pipeline-using-Airflow/issues/4#issue-2105340932)  
+8. Once the pipeline finishes successfully, the transformed data will be loaded into the PostgreSQL database table.  
+[See the Data in PostgreSQL Destination Table](https://github.com/Raed-Ashraf/Data-Pipeline-using-Airflow/issues/2#issue-2105337623)  
 
 # Project Structure
 The project's directory structure is as follows:  
