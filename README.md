@@ -16,7 +16,8 @@ Before running this data pipeline, ensure that you have the following dependenci
 4. Create the env file that contains the needed environment variables using the following bash command.  
   
     `echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0" > .env`
-5. Initialize the Airflow environment using the following bash command.
+5. Make sure the the DAG pyhton file snow-to-postgres.py is in the dags folder.
+6. Initialize the Airflow environment using the following bash command.
   
     `docker-compose up airflow-init`
   - **"docker-compose up"**: This command starts the services defined in the docker-compose.yml file.
