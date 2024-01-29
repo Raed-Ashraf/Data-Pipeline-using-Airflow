@@ -10,7 +10,13 @@ Before running this data pipeline, ensure that you have the following dependenci
 # Setup
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
-3. Initialize the Airflow environment using the following bash command.
+3. Create Folders needed by Airflow (dags, logs, plugins) using the following bash command.  
+  
+    `mkdir ./dags ./plugins ./logs`
+4. Create the env file that contains the needed environment variables using the following bash command.  
+  
+    `echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0" > .env`
+5. Initialize the Airflow environment using the following bash command.
   
     `docker-compose up airflow-init`
   - **"docker-compose up"**: This command starts the services defined in the docker-compose.yml file.
