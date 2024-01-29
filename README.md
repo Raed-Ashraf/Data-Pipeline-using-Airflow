@@ -8,7 +8,21 @@ Before running this data pipeline, ensure that you have the following dependenci
 - Docker Compose
 
 # Setup
-1- 
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Initialize the Airflow environment using the following bash command.
+  
+    `docker-compose up airflow-init`
+  - **"docker-compose up"**: This command starts the services defined in the docker-compose.yml file.
+  - **"airflow-init"**: This is a command specific to the Airflow image in the docker-compose file, used to initialize the Airflow metadata database and create the necessary tables and default user.
+4. Start the Airflow server with Docker Compose using the following bash command.  
+  
+    `docker-compose up`   
+  The Airflow UI will be accessible at http://localhost:8080.  
+5. In the Airflow UI, enable the snow-to-postgres DAG.
+6. Trigger the DAG manually or wait for the scheduled interval to start the data pipeline.
+7. Monitor the progress and logs in the Airflow UI.
+8. Once the pipeline finishes successfully, the transformed data will be loaded into the PostgreSQL database table.
 
 # Project Structure
 The project's directory structure is as follows:  
