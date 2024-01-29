@@ -17,7 +17,7 @@ The project's directory structure is as follows:
 │   └── snow-to-postgres.py  
 ├── logs  
 ├── plugins  
-├── docker-compose.yml  
+├── docker-compose.yaml  
 ├── .env  
 └── README.md  
 - **dags**: Contains the DAG (Directed Acyclic Graph) file, snow-to-postgres.py, which defines the workflow of the data pipeline.
