@@ -1,6 +1,14 @@
 # Data Pipeline using Apache Airflow: ServiceNow to PostgreSQL
 This GitHub repository contains a data pipeline project built using Apache Airflow to extract data from the ServiceNow platform, specifically the "incidents" table, using its REST API. The extracted data is then parsed and transformed to map two fields, namely "Priority" and "State," from integers to strings based on a specific mapping list. Finally, the transformed data is loaded into a PostgreSQL database table. Docker is used to initiate and run the Airflow server on your local machine.
 
+# ServiceNow Platform Overview
+The ServiceNow platform is a cloud-based IT service management (ITSM) and business process automation solution that helps organizations streamline their workflows and improve operational efficiency. It offers a wide range of integrated applications and modules that allow businesses to manage various processes, including incident management, problem management, change management, asset management, and more.
+
+In the previous project, we utilized the ServiceNow platform to extract data from the "incidents" table using its REST API. The incidents table typically stores information about reported issues, problems, or disruptions in an organization's services or systems. By accessing this table via the ServiceNow REST API, we were able to retrieve the relevant data for our data pipeline.  
+[See ServiceNow Incidents Table](https://github.com/Raed-Ashraf/Data-Pipeline-using-Airflow/issues/1#issue-2105297278)
+
+ServiceNow provides a powerful and flexible REST API that allows developers to interact with the platform and retrieve data using standard HTTP methods. With the help of the ServiceNow API, we were able to authenticate and make requests to the platform to extract the necessary data from the incidents table.
+
 # Prerequisites
 Before running this data pipeline, ensure that you have the following dependencies installed on your local machine:
 - Python
@@ -48,10 +56,10 @@ The project's directory structure is as follows:
 - **.env**: An environment variables file that needs to be configured.
 - **README.md**: This file.
 
-# ServiceNow Platform Overview
-The ServiceNow platform is a cloud-based IT service management (ITSM) and business process automation solution that helps organizations streamline their workflows and improve operational efficiency. It offers a wide range of integrated applications and modules that allow businesses to manage various processes, including incident management, problem management, change management, asset management, and more.
+# DAG Description
+The snow-to-postgres DAG orchestrates the following tasks:
+- **Extract Data**: This task makes a request to the ServiceNow API to extract data from the "incidents" table. It retrieves the relevant fields and records from the incidents table and passes the data to the next task in the pipeline.  
+- **Parse Response**: This task receives the extracted data from the previous task and performs parsing operation to required field names.  
+- **Priority State Mapping**: This task receives the extracted data from the previous task and performs transformation operations. Specifically, it maps the "Priority" and "State" fields from integers such as (1, 2, 3, and so on) to strings like (Critical, Hight, Moderate, and so on) based on a predefined mapping list.
+- **Load Data to Postgres**: This task is responsible for loading the transformed data into a PostgreSQL database table. It establishes a connection to the PostgreSQL database and inserts the transformed data into the appropriate table.
 
-In the previous project, we utilized the ServiceNow platform to extract data from the "incidents" table using its REST API. The incidents table typically stores information about reported issues, problems, or disruptions in an organization's services or systems. By accessing this table via the ServiceNow REST API, we were able to retrieve the relevant data for our data pipeline.  
-[See ServiceNow Incidents Table](https://github.com/Raed-Ashraf/Data-Pipeline-using-Airflow/issues/1#issue-2105297278)
-
-ServiceNow provides a powerful and flexible REST API that allows developers to interact with the platform and retrieve data using standard HTTP methods. With the help of the ServiceNow API, we were able to authenticate and make requests to the platform to extract the necessary data from the incidents table.
