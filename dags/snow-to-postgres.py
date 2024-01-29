@@ -23,7 +23,7 @@ dag = DAG(
 def extract_data():
     url = 'https://dev201420.service-now.com/api/now/table/incident?sysparm_exclude_reference_link=false&sysparm_fields=sys_id%2Cnumber%2Cshort_description%2Ccaller_id.name%2Cpriority%2Cstate%2Cassigned_to.name'
     username = 'admin'
-    password = 'Hsk5*JLs*Rz3'
+    password = '**Enter Password Here**'
     
     response = requests.get(url, auth=(username, password))
     snow_data = response.json()
@@ -103,7 +103,7 @@ def load_data_to_postgres(**context):
         port='5432',
         database='staging_import',
         user='etluser_import',
-        password='import'
+        password='**Enter Password Here**'
     )
     
     # Create a cursor
